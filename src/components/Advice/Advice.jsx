@@ -39,7 +39,7 @@ function Advice({text}) {
   if (text != null) {
     return (
       <animated.div style={{...springs}} className='w-10/12 h-auto ease-in-out rounded-xl bg-white shadow-xl py-8 px-14 flex justify-center duration-1000'>
-          <p className='text-blue-950 font-bold text-lg font-sans select-none'> <span className='text-black font-serif text-xl italic'>"</span> {text} <span className='text-black font-serif text-xl italic'>"</span> </p>
+          <p className='text-blue-950 font-bold text-lg font-sans select-none'> <span className='text-black font-serif text-xl italic'>&ldquo</span> {text} <span className='text-black font-serif text-xl italic'>&ldquo</span> </p>
           <button onClick={ ()=> { copyToClipboard(); openModal() } } className='absolute right-2 top-2 rounded-xl shadow-2xl border-slate-300 border-2 p-2'> <FaCopy color='rgb(23 37 84)' size={18}/> </button>
 
           <Modal isOpen={modalOpen} onRequestClose={closeModal} style={customStyles} className='w-1/3 h-auto absolute top-1/2 left-1/2 bg-teal-600 p-4 rounded-lg flex flex-col gap-5 items-center justify-center' contentLabel="Successfully copied">
