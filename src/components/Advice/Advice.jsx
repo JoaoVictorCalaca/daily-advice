@@ -22,10 +22,18 @@ function Advice({text}) {
     setModalOpen(false)
   }
 
-  const springs = useSpring({
+  const [springs, api] = useSpring(() => ({
     from: { x: -1500, transform: 'rotate(180deg)' },
     to: { x: 0, transform: 'rotate(0deg)' },
-  });
+    reset: true
+  }));
+
+  useEffect(() => {
+    api.start({
+      from: { x: -1500, transform: 'rotate(180deg)' },
+      to: { x: 0, transform: 'rotate(0deg)' },
+    });
+  }, [api]);
 
   const copyToClipboard = async () => {
     try {
