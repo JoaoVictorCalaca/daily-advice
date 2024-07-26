@@ -39,7 +39,7 @@ function Advice({text}) {
   if (text != null) {
     return (
       <animated.div style={{...springs}} className='w-10/12 h-auto ease-in-out rounded-xl bg-white shadow-xl py-8 px-14 flex justify-center duration-1000'>
-          <p className='text-blue-950 font-bold text-lg font-sans select-none'> <span className='text-black font-serif text-xl italic'>&ldquo</span> {text} <span className='text-black font-serif text-xl italic'>&ldquo</span> </p>
+          <p className='text-blue-950 font-bold text-lg font-sans select-none'> <span className='text-black font-serif text-xl italic'>&ldquo;</span> {text} <span className='text-black font-serif text-xl italic'>&ldquo;</span> </p>
           <button onClick={ ()=> { copyToClipboard(); openModal() } } className='absolute right-2 top-2 rounded-xl shadow-2xl border-slate-300 border-2 p-2'> <FaCopy color='rgb(23 37 84)' size={18}/> </button>
 
           <Modal isOpen={modalOpen} onRequestClose={closeModal} style={customStyles} className='w-1/3 h-auto absolute top-1/2 left-1/2 bg-teal-600 p-4 rounded-lg flex flex-col gap-5 items-center justify-center' contentLabel="Successfully copied">
@@ -53,7 +53,7 @@ function Advice({text}) {
   return (
     <div>
       <h1 className='text-2xl text-white font-bold duration-100 ease-in-out'>Hello, welcome to Daily Advice! 👋</h1>
-      <p className='text-lg text-slate-100 duration-100 ease-in-out'>Click the button below to generate a random tip</p>
+      <p className='text-lg text-slate-100 duration-100 ease-in-out'>Click the button below to generate a funny random tip</p>
     </div>
   )
 }
